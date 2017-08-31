@@ -1,15 +1,6 @@
-require 'DockingStation'
+require 'Docking_Station'
 
-describe Docking_Station do
-it 'should release bike' do
-  docking_station = Docking_Station.new
-  expect(docking_station).to respond_to :release_bike
-  end
-end
+describe DockingStation do
+ it { is_expected.to respond_to(:dock).with(1).argument }#it 'should release bike' do
 
-describe Bike do
-  it 'works' do
-    bike = Bike.new
-    expect(bike).to respond_to :working?
-  end
 end
